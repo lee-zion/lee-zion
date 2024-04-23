@@ -2,7 +2,7 @@ name: LeetCode Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Update stats every day at midnight
+    - cron: '0 9 * * *'  # Update stats every day at 6PM
 
 jobs:
   update-readme:
