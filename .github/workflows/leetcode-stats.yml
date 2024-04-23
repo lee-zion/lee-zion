@@ -1,0 +1,19 @@
+name: LeetCode Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Update stats every day at midnight
+
+jobs:
+  update-readme:
+    name: Update README with LeetCode stats
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Fetch LeetCode stats
+        uses: jayesh-srivastava/leetcode-stats-card@v1.0.0
+        with:
+          leetcode_username: 'lee-zion'
+          readme_file_path: './README.md'
+          commit_message: 'Update LeetCode stats'
